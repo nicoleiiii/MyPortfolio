@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; font-family: 'Poppins'; ">
+    <div class="card p-5 shadow-lg" style="max-width: 600px; width: 100%; border-radius: 12px; background-color: #FFF7F1;">
+        <h2 class="text-center mb-4 fw-bold" style="color: #D67A31;">Get in Touch</h2>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success text-center fw-bold">@TempData["Message"]</div>
+        }
+
+        <form method="post" asp-action="Submit">
+            <div class="mb-3">
+                <label class="form-label fw-semibold" style="color: #D67A31; font-size: 1.1rem;">Your Name</label>
+                <input type="text" class="form-control border-1" name="Name" placeholder="Enter your name" required style="font-size: 1.1rem;">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold" style="color: #D67A31; font-size: 1.1rem;">Your Email</label>
+                <input type="email" class="form-control border-1" name="Email" placeholder="Enter your email" required style="font-size: 1.1rem;">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold" style="color: #D67A31; font-size: 1.1rem;">Your Message</label>
+                <textarea class="form-control border-1" name="Message" rows="4" placeholder="Type your message" required style="font-size: 1.1rem;"></textarea>
+            </div>
+
+            <button type="submit" class="btn w-100 fw-bold text-white" style="background-color: #D67A31; font-size: 1.1rem;">Send Message</button>
+        </form>
+    </div>
+</div>

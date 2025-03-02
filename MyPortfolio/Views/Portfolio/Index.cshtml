@@ -1,0 +1,23 @@
+﻿@model List<PortfolioApp.Models.Project>
+
+@{
+    ViewData["Title"] = "Portfolio";
+}
+<div class="container py-5" style="font-family: 'Poppins'; min-height: 100vh;">
+    <h2 class="text-center mb-4 fw-bold" style="color: #D67A31;">My Projects</h2>
+
+    <div class="row">
+        @foreach (var project in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0" style="border-radius: 12px; background-color: #FFF7F1;">
+                    <img src="@project.ImageUrl" class="card-img-top" alt="Project" style="border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold" style="color: #D67A31;">@project.Title</h5>
+                        <p class="card-text" style="color: #555;">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,137 @@
+
+/* Ensure full height for the page */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push content to take available space */
+.container {
+    flex: 1;
+}
+
+/* Header Styling */
+header {
+    background: #D67A31; /* Soft Orange */
+    padding: 15px; /* Match footer padding */
+    text-align: center;
+    color: white;
+    font-size: 1.2rem; /* Ensure text consistency */
+}
+
+
+/* Ensure footer stays at the bottom */
+footer {
+    margin-top: auto;
+    background: #D67A31; /* Soft Orange */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Social Icons */
+.footer-icons {
+    margin-top: 10px;
+}
+
+    .footer-icons a {
+        color: white;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s ease-in-out;
+    }
+
+        .footer-icons a:hover {
+            color: #F4A261; /* Lighter Soft Orange */
+        }
+
+/* Navbar Button */
+.navbar .btn {
+    background: #555 !important; /* Grey */
+    color: white !important;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+    .navbar .btn:hover {
+        background: #333 !important; /* Darker Grey on Hover */
+    }
+
+.navbar-nav .nav-link {
+    font-weight: bold; /* Make font bold */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(135deg, #D67A31, #F4A261); /* Soft Orange Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated Button */
+.btn-animated {
+    transition: all 0.3s ease-in-out;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+    .btn-animated:hover {
+        transform: scale(1.1);
+        background: #fff;
+        color: #D67A31;
+    }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #333 !important;
+}
+
+.dark-mode .footer-icons a {
+    color: white;
+}
+
+    .dark-mode .footer-icons a:hover {
+        color: #F4A261; /* Soft Orange */
+    }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .navbar {
+    background-color: #333 !important;
+}
+
+.dark-mode .footer-icons a {
+    color: white;
+}
+
+.dark-mode .footer-icons a:hover {
+    color: #F4A261; /* Lighter Soft Orange */
+}
+
+/* Ensure footer and navbar links change in dark mode */
+.dark-mode .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+    color: #F4A261 !important;
+}
+
+.dark-mode footer {
+    background: #222 !important;
+}
+
+
